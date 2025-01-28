@@ -2,10 +2,10 @@
 include_once('conexao.php');
 session_start();
 
-// if(!isset($_SESSION['nome_sessao'])){
-//     header('Location: index.php');
-//     exit();
-// }
+if(!isset($_SESSION['nome_sessao'])){
+    header('Location: index.php');
+    exit();
+}
 
 $sql_usuarios = 'SELECT * FROM usuários';
 $resultado_usuarios = $conexao->query($sql_usuarios);

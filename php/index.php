@@ -24,9 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['nome_sessao'] = $usuario_logado['nome_usuario'];
                 $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
                 $_SESSION['id_sessao'] = $usuario_logado['id_usuario'];
+                var_dump($_SESSION);  // Verifique se os dados da sessão estão sendo definidos corretamente
                 header('location: dashbord.php');
                 exit();
-            } else {
+            }
+            else {
                 // Senha incorreta
                 $alerta = "Swal.fire({
                     icon: 'error',
